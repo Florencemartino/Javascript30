@@ -1,0 +1,26 @@
+body {
+  background-image: url("https://pixabay.com/get/54e7d54b4b5bac14f6d1867dda6d49214b6ac3e45657714d76287ed192/musician-2708190_1920.jpg");
+}
+
+.keys {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  padding:50px;
+  margin: 50px;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  background-color: rgba(105, 105, 105, 0.5);
+  font-size: 40px;
+  border-radius: 5px;
+  transition:all .07s
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
+
+}
