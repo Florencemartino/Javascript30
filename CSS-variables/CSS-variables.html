@@ -21,6 +21,22 @@
   <img src="https://cdn.pixabay.com/photo/2015/03/23/13/57/rainbow-lorikeet-686100_1280.jpg">
 
   <style>
+
+    :root {
+      --base: #ffc600;
+      --blur: 10px;
+      --spacing: 10px;
+    }
+
+    img {
+      padding: var(--spacing);
+      filter: blur(var(--blur));
+      background: var(--base);
+    }
+
+    .hl {
+      color: var(--base);
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -41,6 +57,19 @@
   </style>
 
   <script>
+
+    const inputs = document.querySelectorAll('.controls input')
+
+
+    function handleUpdate(){
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+
   </script>
 
 </body>
